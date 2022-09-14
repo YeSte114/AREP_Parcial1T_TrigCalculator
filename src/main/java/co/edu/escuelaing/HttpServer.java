@@ -59,14 +59,29 @@ public class HttpServer {
                         + "<h1>Resultado: </h1>\n" //+ HttpConnectionExample.getResultado(path.split(" ")[1].split("=")[1])
                         + "</body>\n"
                         + "</html>\n";
+            } else {
+                outputLine = "HTTP/1.1 200 OK\r\n"
+                        + "Content-Type: application/json\r\n" + "\r\n"
+                        + "<!DOCTYPE html>\n"
+                        + "<html>\n"
+                        + "<head>\n"
+                        + "<meta charset=\"UTF-8\">\n"
+                        + "<title>Title of the document</title>\n"
+                        + "</head>\n";
             }
             out.println(outputLine);
             out.close();
             in.close();
             clientSocket.close();
         }
-
-
         serverSocket.close();
+
+
+
     }
+
+    public void getHTML(){
+
+    }
+
 }
