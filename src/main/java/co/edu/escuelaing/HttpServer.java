@@ -31,7 +31,7 @@ public class HttpServer {
                     clientSocket.getOutputStream(), true);
             BufferedReader in = new BufferedReader(
                     new InputStreamReader(clientSocket.getInputStream()));
-            String inputLine, outputLine, path="";
+            String inputLine, outputLine="", path="";
             Boolean firstLine = true;
             String bodyResponse = null;
             while ((inputLine = in.readLine()) != null) {
@@ -56,11 +56,9 @@ public class HttpServer {
                         + "<title>Title of the document</title>\n"
                         + "</head>\n"
                         + "<body>\n"
-                        + "<h1>Resultado: </h1>\n" + HttpConnectionExample.getResultado(path.split(" ")[1].split("=")[1])
+                        + "<h1>Resultado: </h1>\n" //+ HttpConnectionExample.getResultado(path.split(" ")[1].split("=")[1])
                         + "</body>\n"
                         + "</html>\n";
-            } else {
-
             }
             out.println(outputLine);
             out.close();

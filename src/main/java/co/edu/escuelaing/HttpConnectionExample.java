@@ -8,7 +8,7 @@ import java.net.URL;
 
 public class HttpConnectionExample {
     private static final String USER_AGENT = "Mozilla/5.0";
-    private static final String GET_URL = "https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol=fb&apikey=Q1QZFVJQ21K7C6XM";
+    private static final String GET_URL = "https://www.alphavantage.co/calculadora?val=&symbol=fb&apikey=Q1QZFVJQ21K7C6XM";
 
     public static void main(String[] args) throws IOException {
 
@@ -38,5 +38,8 @@ public class HttpConnectionExample {
             System.out.println("GET request not worked");
         }
         System.out.println("GET DONE");
+    }
+    public void getResultado(){
+
     }
 }
