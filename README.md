@@ -1,5 +1,7 @@
 # AREP_Parcial1T_TrigCalculator
 
+[HEROKU]
+
 1. Construir una  aplicación web usando sockets que reciba un número y una cadena de tres caracteres. La cadena puede ser una de cuatro opciones: "cos", "sin", "tan", "qck". La aplicación asume que el número que recibe está en radianes y muestra el valor de la función trigonométrica correspondiente. Si la calculadora está en modo "qck" la calculadora recibe una lista de enteros desordenada y los retorna de manera ordenada usando quicksort.
 2. Arquitectura:
    1. La aplicación tendrá tres componentes distribuidos: Una fachada de servicios, un servicio de calculadora trigonomética, y un cliente web (html +js).
@@ -17,3 +19,4 @@
 9. El API de la calculadora será
    1. [url de la app en Heroku]/[operación de tres letras: cos, sin, tan,qck]?val=[numero o lista de números] : retorna el valor solicitado en formato JSON
 10. Asegúrese de retornar los encabezados correctos en HTTP y de responder mensajes válidos de HTTP ante solicitudes inesperadas (Heroku hace algunas solicitudes iniciales al publicar la aplicación)
+
